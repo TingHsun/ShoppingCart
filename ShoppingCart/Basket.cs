@@ -20,6 +20,9 @@ namespace ShoppingCart
                 case 3:
                     discount = 0.9;
                     break;
+                case 4:
+                    discount = 0.8;
+                    break;
             }
             double price = books.Select(x => x.Price).Sum() * discount;
             return price;
