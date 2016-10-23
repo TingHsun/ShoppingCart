@@ -27,7 +27,7 @@ namespace ShoppingCartTest
         public void buy_2_books_ep1_ep2_in_shoppingcart()
         {
             //Arrange
-            int expected = 190;
+            double expected = 190;
 
             //Act
             var books = new List<BookDao>
@@ -36,7 +36,7 @@ namespace ShoppingCartTest
                 new BookDao { Episode = "2", Price = 100 },
             };
             Basket basket = new Basket();
-            int actual = basket.CalculateThePrice(books);
+            double actual = basket.CalculateThePrice(books);
 
             //Assert
             Assert.AreEqual(expected, actual);
