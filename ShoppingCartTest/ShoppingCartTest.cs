@@ -107,5 +107,26 @@ namespace ShoppingCartTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void buy_4_books_ep1_ep2_ep3_for_2_in_shoppingcart()
+        {
+            //Arrange
+            double expected = 370;
+
+            //Act
+            var books = new List<BookDao>
+            {
+                new BookDao { Episode = "1", Price = 100 },
+                new BookDao { Episode = "2", Price = 100 },
+                new BookDao { Episode = "3", Price = 100 },
+                new BookDao { Episode = "3", Price = 100 },
+            };
+            Basket basket = new Basket();
+            double actual = basket.CalculateThePrice(books);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
