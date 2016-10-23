@@ -15,9 +15,12 @@ namespace ShoppingCartTest
             int expected = 100;
 
             //Act
-            var books = new BookDao(){ Episode = "1" , Price = 100};
+            var books = new List<BookDao>
+            {
+                new BookDao { Episode = "1", Price = 100 }
+            };
             Basket basket = new Basket();
-            int actual = basket.CalculateThePrice(books);
+            double actual = basket.CalculateThePrice(books);
             
             //Assert
             Assert.AreEqual(expected, actual);

@@ -5,13 +5,7 @@ using System.Linq;
 namespace ShoppingCart
 {
     public class Basket
-    {
-        public int CalculateThePrice(BookDao books)
-        {
-            int price = books.Price;
-            return price;
-        }
-
+    {     
         public double CalculateThePrice(List<BookDao> books)
         {
             double discount = 1;
