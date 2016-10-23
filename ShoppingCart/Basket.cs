@@ -6,7 +6,8 @@ namespace ShoppingCart
     {
         public int CalculateThePrice(BookDao books)
         {
-            throw new NotImplementedException();
+            int price = books.Price;
+            return price;
         }
     }
 }
